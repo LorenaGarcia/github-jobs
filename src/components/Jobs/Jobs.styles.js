@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.a`
   width: 100%;
   display: grid;
   margin-bottom: 2rem;
@@ -11,6 +11,8 @@ const Container = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
 
   @media (max-width: 480px) {
     gap: 0.5rem;

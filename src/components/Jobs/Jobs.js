@@ -12,10 +12,18 @@ import {
 } from "./Jobs.styles";
 
 const Jobs = ({ data }) => {
-  const { company, company_logo, title, location, created_at, type } = data;
+  const { company, company_logo, title, location, created_at, type, url } =
+    data;
+
+  console.log(url.replace("https://jobs.github.com/positions/", " "));
 
   return (
-    <Container>
+    <Container
+      href={`/position/${url.replace(
+        "https://jobs.github.com/positions/",
+        ""
+      )}`}
+    >
       {company_logo ? (
         <Image src={company_logo} />
       ) : (

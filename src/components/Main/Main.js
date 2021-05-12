@@ -1,4 +1,4 @@
-import { Container, Left, Rigth } from "./Main.styles";
+import { Container } from "./Main.styles";
 
 const Main = ({ children }) => {
   return <Container>{children}</Container>;

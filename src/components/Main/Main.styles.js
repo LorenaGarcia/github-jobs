@@ -5,7 +5,7 @@ const Container = styled.div`
   margin-top: 2rem;
   gap: 2rem;
   grid-template-rows: 1fr;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 25rem 1fr;
   grid-template-areas: "contentlLeft contentRigth";
 
   @media (max-width: 480px) {
@@ -14,6 +14,10 @@ const Container = styled.div`
     grid-template-areas:
       "contentlLeft"
       "contentRigth";
+  }
+
+  @media (min-width: 481px) and (max-width: 950px) {
+    grid-template-columns: 15rem 1fr;
   }
 `;
 
