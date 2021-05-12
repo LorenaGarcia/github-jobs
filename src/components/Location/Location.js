@@ -13,8 +13,8 @@ const Location = () => {
     <Container>
       <CheckBox>
         <input type="checkbox" id="fulltime" name="fulltime" value="fulltime" />
-        <span class="checkbox-custom rectangular"></span>
-        <label for="fulltime">Full time</label>
+        <span></span>
+        <label htmlFor="fulltime">Full time</label>
       </CheckBox>
       <div>
         <Title>Location</Title>
@@ -26,21 +26,21 @@ const Location = () => {
         </ContainerInput>
         <RadioButton>
           <input type="radio" id="london" name="city" />
-          <label for="london">London</label>
+          <label htmlFor="london">London</label>
         </RadioButton>
         <RadioButton>
           <input type="radio" id="Amsterdam" name="city" />
-          <label for="Amsterdam">Amsterdam</label>
+          <label htmlFor="Amsterdam">Amsterdam</label>
         </RadioButton>
 
         <RadioButton>
           <input type="radio" id="New York" name="city" />
-          <label for="New York">New York</label>
+          <label htmlFor="New York">New York</label>
         </RadioButton>
 
         <RadioButton>
           <input type="radio" id="Berlin" name="city" />
-          <label for="Berlin">Berlin</label>
+          <label htmlFor="Berlin">Berlin</label>
         </RadioButton>
       </div>
     </Container>
