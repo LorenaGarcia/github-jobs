@@ -85,6 +85,10 @@ const Button = styled.button`
     width: 90px;
     font-size: 12px;
   }
+
+  @media (min-width: 481px) and (max-width: 900px) {
+    margin-right: 5.7rem;
+  }
 `;
 
 export { Container, ContainerInput, Input, Icon, Button };

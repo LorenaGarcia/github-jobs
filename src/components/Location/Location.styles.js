@@ -59,6 +59,7 @@ const Title = styled.p`
 `;
 
 const RadioButton = styled.div`
+  margin-left: 1rem;
   margin-bottom: 1rem;
   [type="radio"]:checked,
   [type="radio"]:not(:checked) {
@@ -116,6 +117,64 @@ const RadioButton = styled.div`
   }
 `;
 
-const CheckBox = styled.div``;
+const CheckBox = styled.div`
+  display: flex;
+  align-items: center;
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    visibility: hidden;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 2.3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #334680;
+    line-height: 1.7;
+    cursor: pointer;
+  }
+
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 0.2em;
+    -webkit-transition: all 0.275s;
+    transition: all 0.275s;
+  }
+
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: "x";
+    position: absolute;
+    top: 0.525em;
+    left: 0.35em;
+    font-size: 1.375em;
+    color: #1e86ff;
+    line-height: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(45deg);
+    transform: scale(0) rotate(45deg);
+  }
+
+  [type="checkbox"]:checked + label:before {
+    border: 1px solid #1e86ff;
+  }
+`;
 
 export { Container, ContainerInput, Input, Icon, Title, RadioButton, CheckBox };

@@ -17,6 +17,10 @@ const Container = styled.a`
   @media (max-width: 480px) {
     gap: 0.5rem;
   }
+
+  @media (min-width: 481px) and (max-width: 900px) {
+    gap: 0;
+  }
 `;
 
 const Image = styled.img`
@@ -27,8 +31,15 @@ const Image = styled.img`
   padding: 1rem;
 
   @media (max-width: 480px) {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 0;
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 950px) {
+    width: 7rem;
+    height: 7rem;
     margin-right: 0;
     padding: 0.5rem;
   }
@@ -79,6 +90,10 @@ const Location = styled.p`
   @media (max-width: 480px) {
     margin-right: 1rem;
   }
+
+  @media (min-width: 481px) and (max-width: 900px) {
+    margin-right: 0.2rem;
+  }
 `;
 
 const Days = styled.p`
@@ -118,6 +133,7 @@ const Position = styled.p`
 `;
 
 const FullTime = styled.div`
+  min-width: 4rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -131,6 +147,10 @@ const FullTime = styled.div`
 
   @media (max-width: 480px) {
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 900px) {
+    margin-right: 0.5rem;
   }
 `;
 

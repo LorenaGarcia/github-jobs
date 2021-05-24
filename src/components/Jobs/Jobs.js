@@ -15,8 +15,6 @@ const Jobs = ({ data }) => {
   const { company, company_logo, title, location, created_at, type, url } =
     data;
 
-  console.log(url.replace("https://jobs.github.com/positions/", " "));
-
   return (
     <Container
       href={`/position/${url.replace(

@@ -6,8 +6,9 @@ import { Loading } from "@/components/Loading";
 import { Left, Rigth } from "@/components/Main/Main.styles";
 
 const Position = ({ idPosition }) => {
-  const [dataPosition, setDataPosition] = useState(null);
+  const [dataPosition, setDataPosition] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(async () => {
     setIsLoading(true);
     try {
@@ -24,8 +25,6 @@ const Position = ({ idPosition }) => {
       setIsLoading(false);
     }
   }, []);
-
-  console.log("data", dataPosition);
 
   return (
     <Main>

@@ -15,6 +15,10 @@ const Container = styled.div`
   @media (max-width: 480px) {
     padding: 1rem 0.5rem;
   }
+
+  @media (min-width: 481px) and (max-width: 950px) {
+    padding: 1rem 1rem;
+  }
 `;
 
 const Navigation = styled.div`
