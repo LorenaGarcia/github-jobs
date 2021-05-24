@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import Head from "next/head";
 import { Search } from "@/components/Search";
 import { Main } from "@/components/Main";
 import { Left, Rigth } from "@/components/Main/Main.styles";
@@ -101,6 +102,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Github Jobs</title>
+        <meta property="og:title" content="Github Jobs" key="title" />
+        <meta name="description" content="Github Jobs" />
+        <meta property="og:image" content="/images/home.jpg" />
+      </Head>
       <Search
         setSearchWord={setSearchWord}
         searchWord={searchWord}
