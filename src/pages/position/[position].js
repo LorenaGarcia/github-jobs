@@ -26,6 +26,19 @@ const Position = ({ idPosition }) => {
     }
   }, []);
 
+  const daysAgo = (created) => {
+    if (typeof window !== "undefined" && created) {
+      var options = { year: "numeric", month: "2-digit", day: "2-digit" };
+      var endDate = new window.Date().toLocaleDateString("en-EN", options);
+      var startDate = new window.Date(
+        Intl.DateTimeFormat("en-EN", options).format(new window.Date(created))
+      );
+      var diff = new window.Date(endDate).getTime() - startDate.getTime();
+
+      return diff / (1000 * 60 * 60 * 24) + " days ago";
+    }
+  };
+
   return (
     <Main>
       {isLoading ? (
@@ -36,7 +49,7 @@ const Position = ({ idPosition }) => {
           </Rigth>
         </>
       ) : (
-        dataPosition && <Detail data={dataPosition} />
+        dataPosition && <Detail daysAgo={daysAgo} data={dataPosition} />
       )}
     </Main>
   );

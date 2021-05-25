@@ -100,6 +100,17 @@ export default function Home() {
     }
   };
 
+  const daysAgo = (created) => {
+    var options = { year: "numeric", month: "2-digit", day: "2-digit" };
+    var endDate = new window.Date().toLocaleDateString("en-EN", options);
+    var startDate = new window.Date(
+      Intl.DateTimeFormat("en-EN", options).format(new window.Date(created))
+    );
+    var diff = new window.Date(endDate).getTime() - startDate.getTime();
+
+    return diff / (1000 * 60 * 60 * 24) + " days ago";
+  };
+
   return (
     <>
       <Head>
@@ -131,7 +142,9 @@ export default function Home() {
         ) : (
           <Rigth>
             {jobs[0] &&
-              jobs.map((value, index) => <Jobs key={index} data={value} />)}
+              jobs.map((value, index) => (
+                <Jobs key={index} daysAgo={daysAgo} data={value} />
+              ))}
             {message && <Message text={message} />}
             {jobs.length === 50 || page > 1 ? (
               <Pagination page={page} morePositions={morePositions} />

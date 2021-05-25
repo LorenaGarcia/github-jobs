@@ -11,7 +11,7 @@ import {
   FullTime,
 } from "./Jobs.styles";
 
-const Jobs = ({ data }) => {
+const Jobs = ({ data, daysAgo }) => {
   const { company, company_logo, title, location, created_at, type, url } =
     data;
 
@@ -42,7 +42,7 @@ const Jobs = ({ data }) => {
             </Location>
             <Days>
               <span className="material-icons">schedule</span>
-              {created_at}
+              {daysAgo(created_at)}
             </Days>
           </ContainerFlex>
         </Footer>

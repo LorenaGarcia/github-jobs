@@ -14,7 +14,7 @@ import {
 } from "./Detail.styles";
 import { Left, Rigth } from "@/components/Main/Main.styles";
 
-const Detail = ({ data }) => {
+const Detail = ({ data, daysAgo }) => {
   const {
     company,
     company_logo,
@@ -44,7 +44,7 @@ const Detail = ({ data }) => {
         </ContainerTitle>
         <Days>
           <span className="material-icons">schedule</span>
-          {created_at}
+          {daysAgo(created_at)}
         </Days>
         <ContainerImage>
           <Image src={company_logo} />
